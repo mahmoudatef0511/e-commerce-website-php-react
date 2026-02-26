@@ -1,2 +1,2 @@
-/vendor/
-/.env
+/backend/vendor/
+/backend/.env
