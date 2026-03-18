@@ -4,8 +4,8 @@ namespace App\Entities;
 
 class PriceEntity implements \JsonSerializable
 {
-    protected float $amount;
-    protected string $currency;
+    private float $amount;
+    private string $currency;
 
     public function setAmount(float $amount): void
     {

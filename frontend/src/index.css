@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav-item .nav-link.active {
+  color: #5ece7b;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #5ece7b;
+  margin-bottom: 5px;
+}
+
+.cart-container {
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.15);
+  width: 600px;
+  height: 600px;
+  top: -60px;
+  left: 900px;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.plp-container,
+.pdp-container {
+  margin-top: 9rem;
+}
+
+.product-image {
+  height: 18rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card {
+  height: 100%;
+}
+
+.product-container {
+  position: relative;
+}
+
+.product-card {
+  width: 18rem;
+  padding: 2rem;
+}
+
+.instock-product .hovered {
+  background-color: #fff;
+  box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.15);
+}
+
+.outstock-product {
+  opacity: 40%;
+}
+
+.outstock-span {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.product-card {
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  left: 25%;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: medium;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.add-to-cart-icon {
+  position: absolute;
+  left: 60%;
+  top: 80%;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.attribute-item {
+  border: 1px solid black;
+  text-align: center;
+  padding: 0.25rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.attribute-item-swatch {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.attribute-item-text-selected {
+  color: white;
+  background-color: black;
+}
+
+.attribute-item-swatch-selected {
+  border: 3px solid black;
+  padding: 0.75rem;
+}
+
+.custom-btn {
+  background-color: #5ece7b;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+}
+
+.disabled {
+  opacity: 40%;
+}
+
+.gallery-container {
+  max-height: 42.5rem;
+  overflow-y: scroll;
+}
+
+.slider-image img {
+  width: 100%;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.main-slider-image {
+  width: 100%;
+}
+
+.next-btn,
+.previous-btn {
+  color: white;
+  background-color: black;
+  top: 12rem;
+}
+
+.next-btn {
+  right: 0.75rem;
+}
+.previous-btn {
+  left: 0.75rem;
+}

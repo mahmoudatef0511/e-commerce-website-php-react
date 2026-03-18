@@ -32,8 +32,7 @@ class ProductResolver
     public static function byCategory(?string $category): array
     {
         $all = ProductRepository::all();
-        if (!$category) return $all;
+        if (!$category || $category === "all") return $all;
         return array_filter($all, fn($p) => strtolower($p->getCategory()) === strtolower($category));
     }
 }
-

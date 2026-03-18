@@ -50,6 +50,7 @@ class GraphQL
                         'type' => new OrderType(),
                         'args' => [
                             'items' => Type::listOf(new OrderItemInputType()),
+                            'total' => Type::float(),
                         ],
                         'resolve' => [OrderResolver::class, 'createOrder']
                     ],

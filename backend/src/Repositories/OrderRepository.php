@@ -8,9 +8,9 @@ use App\Entities\OrderItemEntity;
 
 class OrderRepository
 {
-    public static function create(array $items): OrderEntity
+    public static function create(array $items, float $total): OrderEntity
     {
-        $rawOrder = OrderModel::create($items);
+        $rawOrder = OrderModel::create($items, $total);
         return self::mapToEntity($rawOrder);
     }
 

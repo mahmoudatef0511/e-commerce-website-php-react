@@ -4,11 +4,11 @@ namespace App\Entities;
 
 class OrderItemEntity implements \JsonSerializable
 {
-    protected ?int $id;
-    protected ?int $order_id;
-    protected ?int $product_id;
-    protected int $quantity;
-    protected array $selected_options;
+    private ?int $id;
+    private ?int $order_id;
+    private ?int $product_id;
+    private int $quantity;
+    private array $selected_options;
 
     public function __construct(array $data = [])
     {

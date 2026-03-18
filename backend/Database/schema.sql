@@ -1,20 +1,14 @@
--- -- mysql -u root -p < Database/schema.sql
--- -- php -S localhost:8000 -t public
 
--- -- Drop the database if it exists
 DROP DATABASE IF EXISTS scandiweb;
 
 CREATE DATABASE scandiweb;
 USE scandiweb;
 
-
--- Categories table
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
 
--- Products table
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     id VARCHAR(255),
@@ -34,7 +28,6 @@ CREATE TABLE galleries (
         ON DELETE CASCADE
 );
 
--- Product attributes table
 CREATE TABLE attributes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,
@@ -43,7 +36,6 @@ CREATE TABLE attributes (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
--- Attribute items table
 CREATE TABLE attribute_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     attribute_id INT,
@@ -52,7 +44,6 @@ CREATE TABLE attribute_items (
     FOREIGN KEY (attribute_id) REFERENCES attributes(id)
 );
 
--- Prices table
 CREATE TABLE prices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,
@@ -61,13 +52,12 @@ CREATE TABLE prices (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
--- Orders table
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    total DECIMAL(10,2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Order items table
 CREATE TABLE order_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,

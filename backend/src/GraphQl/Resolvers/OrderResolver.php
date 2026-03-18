@@ -9,7 +9,7 @@ class OrderResolver
     
     public static function createOrder($root, $args)
     {
-        return OrderRepository::create($args['items']);
+        return OrderRepository::create($args['items'], $args['total']);
     }
 
     public static function order($root, $args)

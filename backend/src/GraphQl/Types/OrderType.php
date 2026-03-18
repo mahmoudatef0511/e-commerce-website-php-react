@@ -20,6 +20,10 @@ class OrderType extends ObjectType
                     'type' => Type::string(),
                     'resolve' => fn($order) => $order->getCreatedAt()
                 ],
+                'total' => [
+                    'type' => Type::float(),
+                    'resolve' => fn($order) => $order->getTotal()
+                ],
                 'items' => [
                     'type' => Type::listOf(new OrderItemType()),
                     'resolve' => fn($order) => $order->getItems()

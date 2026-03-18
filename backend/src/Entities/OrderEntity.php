@@ -4,13 +4,15 @@ namespace App\Entities;
 
 class OrderEntity implements \JsonSerializable
 {
-    protected ?int $id;
-    protected string $created_at;
-    protected array $items = [];
+    private ?int $id;
+    private string $created_at;
+    private float $total;
+    private array $items = [];
 
     public function __construct(array $data = [])
     {
         $this->id = $data['id'] ?? null;
+        $this->total = $data['total'] ?? null;
 
         // ensure it's always a string
         $this->created_at = (string)($data['created_at'] ?? date('Y-m-d H:i:s'));
@@ -40,6 +42,16 @@ class OrderEntity implements \JsonSerializable
         return $this->items;
     }
 
+    public function getTotal(): float
+    {
+        return $this->total;
+    }
+
+    public function setTotal(float $total): void
+    {
+        $this->total = $total;
+    }
+
     public function setItems(array $items): void
     {
         $this->items = $items;
@@ -54,6 +66,7 @@ class OrderEntity implements \JsonSerializable
     {
         return [
             'id' => $this->id,
+            'total' => $this->total,
             'created_at' => $this->created_at,
             'items' => $this->items,
         ];

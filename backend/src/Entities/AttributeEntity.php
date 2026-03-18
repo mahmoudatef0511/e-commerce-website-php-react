@@ -4,12 +4,12 @@ namespace App\Entities;
 
 class AttributeEntity implements \JsonSerializable
 {
-    protected int $id;
-    protected string $name;
-    protected string $type;
+    private int $id;
+    private string $name;
+    private string $type;
 
     /** @var AttributeItemEntity[] */
-    protected array $items = [];
+    private array $items = [];
 
     public function setId(int $id): void
     {

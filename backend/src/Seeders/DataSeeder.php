@@ -129,7 +129,7 @@ class DataSeeder
                 $priceStmt->execute([
                     'product_id' => $dbProductId,
                     'amount' => $price['amount'],
-                    'currency' => $price['currency']['label']
+                    'currency' => $price['currency']['symbol']
                 ]);
             }
 

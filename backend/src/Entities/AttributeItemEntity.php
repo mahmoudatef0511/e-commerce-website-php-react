@@ -4,9 +4,9 @@ namespace App\Entities;
 
 class AttributeItemEntity implements \JsonSerializable
 {
-    protected int $id;
-    protected string $value;
-    protected string $displayValue;
+    private int $id;
+    private string $value;
+    private string $displayValue;
 
     public function setId(int $id): void
     {

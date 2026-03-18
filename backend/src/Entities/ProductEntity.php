@@ -4,22 +4,22 @@ namespace App\Entities;
 
 class ProductEntity implements \JsonSerializable
 {
-    protected int $product_id;
-    protected ?string $id = null;
-    protected string $name;
-    protected ?string $category = null;
-    protected bool $inStock = false;
-    protected ?string $brand = null;
-    protected ?string $description = null;
+    private int $product_id;
+    private ?string $id = null;
+    private string $name;
+    private ?string $category = null;
+    private bool $inStock = false;
+    private ?string $brand = null;
+    private ?string $description = null;
 
     /** @var AttributeEntity[] */
-    protected array $attributes = [];
+    private array $attributes = [];
 
     /** @var string[] */
-    protected array $gallery = [];
+    private array $gallery = [];
 
     /** @var PriceEntity[] */
-    protected array $prices = [];
+    private array $prices = [];
 
     public function __construct(array $data = [])
     {

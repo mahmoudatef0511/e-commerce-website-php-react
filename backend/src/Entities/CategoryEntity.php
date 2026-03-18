@@ -4,8 +4,8 @@ namespace App\Entities;
 
 class CategoryEntity implements \JsonSerializable
 {
-    protected int $id;
-    protected string $name;
+    private int $id;
+    private string $name;
 
     public function __construct(array $data = [])
     {
